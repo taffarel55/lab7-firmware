@@ -2,7 +2,6 @@ import htmlmin
 from csscompressor import compress as minify_css
 from jsmin import jsmin as minify_js
 
-
 def getContentBetweenTag(content, tag):
     return content.split(f"<{tag}>")[1].split(f"</{tag}>")[0]
 
@@ -16,6 +15,8 @@ def format_html_to_c(input_file, output_file):
         html_content, remove_comments=True, remove_empty_space=True
     )
 
+    '''
+
     cssContent = getContentBetweenTag(minified_content, "style")
 
     # Minificar CSS
@@ -27,6 +28,7 @@ def format_html_to_c(input_file, output_file):
     minified_content = minified_content.replace(jsContent, minify_js(jsContent))
 
     minified_content = minified_content.replace("\n", "")
+    '''
 
     formatted_content = (
         f'const char MAIN_page[] PROGMEM = R"=====({minified_content})=====";'

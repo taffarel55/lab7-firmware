@@ -9,7 +9,7 @@ WebServer server(80);
 const char* ssid     = WIFI_NAME;
 const char* password = WIFI_PASSWORD;
 
-IPAddress ip(192,168,0,123); 
+IPAddress ip(192,168,0,234); 
 IPAddress gateway(192,168,0,1); 
 IPAddress subnet(255,255,255,0);
 
@@ -132,7 +132,7 @@ void setup(void){
   Serial.println("");
   Serial.print("Connected to ");
   Serial.println(ssid);
-  Serial.print("IP address: ");
+  Serial.print("IP address: http://");
   Serial.println(WiFi.localIP());  //IP address assigned to your ESP
 //----------------------------------------------------------------
  
