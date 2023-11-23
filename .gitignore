@@ -10,5 +10,11 @@
 # Environment Variables
 .env
 
+# Virtual environment
+venv/
+
 # Webpage code
 src/index.h
+node_modules/
+
+
